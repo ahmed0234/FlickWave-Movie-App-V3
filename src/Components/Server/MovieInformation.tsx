@@ -1,4 +1,3 @@
-import Image from "next/image";
 import CastCarousel from "@/Components/Client/CastCarousel";
 
 interface CastMember {
@@ -66,14 +65,11 @@ export default function MovieInformation({
           <div className="grid gap-8 md:grid-cols-2 lg:gap-12">
             <div className="flex flex-col items-center gap-4 ">
               <div className="relative aspect-[2/3] w-[280px] overflow-hidden rounded-xl sm:w-[400px] md:w-[300px] lg:w-[400px] xl:w-[500px] 2xl:w-[600px]">
-                <Image
-                  alt="Movie Poster"
-                  className="size-full object-cover"
-                  layout="fill"
+                <img
                   src={movieimgsrc}
-                  style={{
-                    objectFit: "cover",
-                  }}
+                  alt="Movie Poster"
+                  className="w-full object-cover"
+                  loading="lazy"
                 />
               </div>
             </div>

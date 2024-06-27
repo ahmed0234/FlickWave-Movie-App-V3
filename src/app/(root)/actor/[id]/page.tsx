@@ -1,4 +1,3 @@
-import Image from "next/image";
 import MovieCard from "@/Components/Server/movieListingCard";
 
 async function actorMoviesDetails(actorid: any) {
@@ -37,12 +36,11 @@ export default async function Page({ params }: any) {
         <div className="grid gap-8 md:grid-cols-2">
           <div className="flex flex-col items-center md:items-start">
             <div className="size-40 overflow-hidden rounded-full md:size-48">
-              <Image
+              <img
+                src={movieImageurl + actorPersonal.profile_path}
                 alt="Actor's Profile Picture"
                 className="size-full object-cover object-center"
-                height={150}
-                src={movieImageurl + actorPersonal.profile_path}
-                width={150}
+                loading="lazy"
               />
             </div>
             <h1 className="mt-4 text-3xl font-bold md:mt-6">

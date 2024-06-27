@@ -1,5 +1,5 @@
 // components/MovieCard.js
-import Image from "next/image";
+
 import Link from "next/link";
 
 const MovieCard = ({
@@ -24,13 +24,11 @@ const MovieCard = ({
       <div className="max-w-sm overflow-hidden rounded bg-black text-white shadow-lg">
         {/* eslint-disable-next-line */}
         <div className="relative flex h-[20rem] items-center justify-center bg-black">
-          <Image
-            src={movieImageurl + movieImage} // Replace with the actual image source
+          <img
+            src={movieImageurl + movieImage}
             alt="Movie Poster"
-            layout="fill"
-            sizes="50vw"
-            quality={50}
             className="w-full object-cover"
+            loading="lazy"
           />
         </div>
         <div className="px-6 py-4">
